@@ -1,0 +1,113 @@
+:root {
+  --bg-main: #0d1117;
+  --bg-card: rgba(30, 41, 59, 0.75);
+  --bg-color: rgba(255, 255, 255, 0.02);
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --text-main: #f8fafc;
+  --text-secondary-color: #cbd5e1;
+  --text-muted: #94a3b8;
+  --accent: #10b981; /* Premium Emerald Accent */
+  --navbar-bg: rgba(15, 23, 42, 0.84);
+  --navbar-link: var(--text-muted);
+  --navbar-link-active: var(--accent);
+  --input-bg: rgba(15, 23, 42, 0.6);
+  --footer-bg: rgba(15, 23, 42, 0.88);
+  --footer-border: rgba(255, 255, 255, 0.08);
+  --section-border: rgba(255, 255, 255, 0.05);
+  --primary-color: rgba(15, 23, 42, 0.95);
+  --border-color: rgba(255, 255, 255, 0.06);
+  --control-bg: rgba(255, 255, 255, 0.08);
+  --control-hover: rgba(255, 255, 255, 0.16);
+  --transition: all 0.2s ease;
+  --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.light-theme {
+  --bg-main: #f8fafc;
+  --bg-card: rgba(255, 255, 255, 0.92);
+  --bg-color: rgba(245, 247, 250, 0.8);
+  --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(15, 23, 42, 0.12);
+  --border-glass: rgba(15, 23, 42, 0.12);
+  --text-main: #0f172a;
+  --text-secondary-color: #475569;
+  --text-muted: #64748b;
+  --accent: #10b981;
+  --navbar-bg: rgba(255, 255, 255, 0.95);
+  --navbar-link: #475569;
+  --navbar-link-active: #0f766e;
+  --input-bg: rgba(245, 247, 250, 0.9);
+  --footer-bg: rgba(255, 255, 255, 0.95);
+  --footer-border: rgba(15, 23, 42, 0.12);
+  --section-border: rgba(15, 23, 42, 0.08);
+  --primary-color: rgba(255, 255, 255, 0.94);
+  --border-color: rgba(15, 23, 42, 0.12);
+  --control-bg: rgba(15, 23, 42, 0.08);
+  --control-hover: rgba(15, 23, 42, 0.12);
+  --transition: all 0.2s ease;
+  --card-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 2rem 2rem 2rem; /* Top padding prevents Navbar overlap */
+}
+
+input, textarea {
+  width: 100%;
+  background: var(--input-bg);
+  border: 1px solid var(--border-glass);
+  color: var(--text-main);
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.2rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+button {
+  background: var(--accent);
+  color: #0f172a;
+  font-weight: 600;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
